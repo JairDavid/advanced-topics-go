@@ -27,7 +27,7 @@ func calcularCualquierArea(f Figura) float64 {
 	return f.area()
 }
 
-func main() {
+func faces() {
 	fmt.Println("output")
 	f1 := Cuadrado{10}
 	f2 := Rectangulo{12, 12}
