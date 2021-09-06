@@ -27,6 +27,11 @@ func calcularCualquierArea(f Figura) float64 {
 	return f.area()
 }
 
+func (r Rectangulo) copyObj() {
+	r.altura = 12
+	fmt.Println("copia modificada", r)
+}
+
 func faces() {
 	fmt.Println("output")
 	f1 := Cuadrado{10}
@@ -36,4 +41,5 @@ func faces() {
 	for _, item := range figuras {
 		fmt.Println(calcularCualquierArea(item))
 	}
+
 }
