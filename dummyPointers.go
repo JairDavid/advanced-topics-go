@@ -28,7 +28,6 @@ func modifyData(array *[]Persona) {
 	QueryAll(array)
 	fmt.Println("Seleciona un ID.")
 	fmt.Scanln(&id)
-
 }
 
 func newRegister(array *[]Persona) {
@@ -75,7 +74,6 @@ func main() {
 		fmt.Println("--------- Register people data ---------")
 		fmt.Println("1) New register")
 		fmt.Println("2) Edit register")
-		fmt.Println("3) Delete register")
 		fmt.Println("4) Query All")
 		fmt.Println("5) exit")
 		fmt.Scanln(&opt)

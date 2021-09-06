@@ -7,7 +7,7 @@ func nose(array []int, i int) {
 	array = append(array[:i], array[i+1:]...)
 }
 
-func main() {
+func lop() {
 	var array = []int{1, 2, 3, 4}
 	fmt.Print(array)
 	nose(array, 3)
