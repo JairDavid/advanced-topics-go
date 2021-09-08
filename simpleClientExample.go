@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func main() {
+func mymain() {
 	res, err := http.Get("https://jsonplaceholder.typicode.com/comments")
 	if err != nil {
 		fmt.Println(err)

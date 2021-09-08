@@ -65,7 +65,7 @@ func QueryAll(array *[]Persona) {
 	}
 }
 
-func main() {
+func dumm() {
 	var registers []Persona
 	exit := false
 	opt := 0
