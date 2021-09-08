@@ -3,8 +3,9 @@ package main
 import "fmt"
 
 type Socket interface {
-	turnOn(socket bool)
-	turnOff(socket bool)
+	turnOn(bool)
+	turnOff(bool)
+	getStatus() bool
 }
 
 type Objbase struct {
@@ -26,6 +27,11 @@ type Teapot struct {
 	maxTemp int
 }
 
+type Blender struct {
+	Objbase
+	rpm int
+}
+
 func (o *Objbase) turnOn(socket bool) {
 	o.on = socket
 }
@@ -34,9 +40,8 @@ func (o *Objbase) turnOff(socket bool) {
 	o.on = socket
 }
 
-type Blender struct {
-	Objbase
-	rpm int
+func (o *Objbase) getStatus() bool {
+	return o.on
 }
 
 func main() {
@@ -54,4 +59,10 @@ func main() {
 	blender.turnOn(true)
 
 	fmt.Println(stereo, coffeMaker, teapot, blender)
+
+	fmt.Print(stereo.getStatus())
+	fmt.Print(coffeMaker.getStatus())
+	fmt.Print(teapot.getStatus())
+	fmt.Print(blender.getStatus())
+
 }
