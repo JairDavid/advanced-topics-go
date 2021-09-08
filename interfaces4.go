@@ -39,6 +39,20 @@ func (d *Deltails) showDeltails() {
 	fmt.Println("Maded in: ", d.madeIn)
 }
 
+func (t *Television) connect(ctd bool) {
+
+}
+func (t *Radio) connect(ctd bool) {
+
+}
+func (t *Laptop) connect(ctd bool) {
+
+}
+
+func status() {
+
+}
+
 func main() {
 	fmt.Println("xd")
 }
