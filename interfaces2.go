@@ -4,7 +4,6 @@ import "fmt"
 
 type Socket interface {
 	turnOn(bool)
-	turnOff(bool)
 	getStatus() bool
 }
 
@@ -33,10 +32,6 @@ type Blender struct {
 }
 
 func (o *Objbase) turnOn(socket bool) {
-	o.on = socket
-}
-
-func (o *Objbase) turnOff(socket bool) {
 	o.on = socket
 }
 
