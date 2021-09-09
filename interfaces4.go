@@ -49,10 +49,6 @@ func (t *Laptop) connect(ctd bool) {
 
 }
 
-func status() {
-
-}
-
-func main() {
+func maina() {
 	fmt.Println("xd")
 }
