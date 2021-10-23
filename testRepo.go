@@ -8,14 +8,16 @@ type testRepo struct {
 
 func (tsr *testRepo) Create(name string) (testRepo, error) {
 	fmt.Printf(name)
+
 	return testRepo{}, nil
 }
 
-func main() {
+func start() {
 	myrepo := new(testRepo)
 	typo, err := myrepo.Create("my text")
 	if err != nil {
 		fmt.Printf("regreso nil")
 	}
+
 	fmt.Print(typo)
 }
