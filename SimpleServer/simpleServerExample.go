@@ -1,4 +1,4 @@
-package main
+package SimpleServer
 
 import (
 	"fmt"
@@ -6,6 +6,7 @@ import (
 )
 
 func call(res http.ResponseWriter, req *http.Request) {
+
 	name := req.URL.Query().Get("name")
 	res.Write([]byte(fmt.Sprintf("Hello: %s", name)))
 }
