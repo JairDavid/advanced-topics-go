@@ -5,23 +5,30 @@ import (
 	"net/http"
 )
 
-func Available(URL string) {
+func Available(URL string, chanel chan interface{}) {
 	_, err := http.Get(URL)
 	if err != nil {
-		fmt.Println("La URL %s no esta en linea", URL)
+		chanel <- "La URL %s no esta en linea" + URL
 	} else {
-		fmt.Println("La URL %s esta en linea", URL)
+		chanel <- "La URL %s esta en linea" + URL
 	}
 }
 
 func SendPeticion() {
+	chanel := make(chan interface{})
+
 	urls := []string{
 		"https://www.google.com",
-		"https://www.youtube.com",
 		"https://aaaasd",
+		"https://www.youtube.com",
 		"https://go.dev",
 	}
 	for _, item := range urls {
-		Available(item)
+		go Available(item, chanel)
 	}
+
+	for i := 0; i < len(urls); i++ {
+		fmt.Println(<-chanel)
+	}
+
 }
