@@ -1,6 +1,9 @@
 package main
 
-import "paquetes/interfaces"
+import (
+	"paquetes/concurrency"
+	"paquetes/interfaces"
+)
 
 func main() {
 	var s1 interfaces.Service1
@@ -9,4 +12,5 @@ func main() {
 	interfaces.Repository.Create(&s1)
 	interfaces.Repository.Create(&s2)
 
+	concurrency.SendPeticion()
 }
