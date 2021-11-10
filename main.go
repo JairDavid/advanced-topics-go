@@ -1,7 +1,9 @@
 package main
 
 import (
+	"fmt"
 	errmanagment "paquetes/errManagment"
+	"paquetes/functions"
 )
 
 func main() {
@@ -16,4 +18,6 @@ func main() {
 	// functions.Start()
 	// functions.StartAnonymous()
 	errmanagment.OpenFile()
+	fn := functions.Repeat(5)
+	fmt.Println(fn("testing"))
 }
