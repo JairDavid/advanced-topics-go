@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
-	errmanagment "paquetes/errManagment"
-	"paquetes/functions"
+	"paquetes/pointers"
 )
 
 func main() {
@@ -15,9 +13,10 @@ func main() {
 
 	// concurrency.SendPeticion()
 
-	// functions.Start()
+	//functions.Start()
 	// functions.StartAnonymous()
-	errmanagment.OpenFile()
-	fn := functions.Repeat(5)
-	fmt.Println(fn("testing"))
+	// errmanagment.OpenFile()
+	// fn := functions.Repeat(5)
+	// fmt.Println(fn("testing"))
+	pointers.Start()
 }
