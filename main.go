@@ -1,7 +1,7 @@
 package main
 
 import (
-	"paquetes/pointers"
+	"paquetes/concurrency"
 )
 
 func main() {
@@ -18,5 +18,6 @@ func main() {
 	// errmanagment.OpenFile()
 	// fn := functions.Repeat(5)
 	// fmt.Println(fn("testing"))
-	pointers.Start()
+	// pointers.Start()
+	concurrency.Testing4()
 }
