@@ -1,8 +1,6 @@
 package main
 
-import (
-	"paquetes/concurrency"
-)
+import "paquetes/concurrency"
 
 func main() {
 	// var s1 interfaces.Service1
@@ -11,13 +9,22 @@ func main() {
 	// interfaces.Repository.Create(&s1)
 	// interfaces.Repository.Create(&s2)
 
-	// concurrency.SendPeticion()
-
 	//functions.Start()
 	// functions.StartAnonymous()
+
 	// errmanagment.OpenFile()
+
 	// fn := functions.Repeat(5)
 	// fmt.Println(fn("testing"))
-	// pointers.Start()
-	concurrency.Testing4()
+	// count := functions.Counter()
+	// fmt.Println(count())
+	// fmt.Println(count())
+
+	// concurrency.SendPeticion()
+
+	concurrency.Testing5()
+	// concurrency.Testing4()
+	// concurrency.Testing3()
+	// concurrency.Testing2()
+	// concurrency.Testing()
 }
