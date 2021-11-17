@@ -1,5 +1,7 @@
 package main
 
+import "paquetes/concurrency"
+
 func main() {
 	// var s1 interfaces.Service1
 	// var s2 interfaces.Service2
@@ -20,6 +22,7 @@ func main() {
 
 	// concurrency.SendPeticion()
 
+	concurrency.Testing6()
 	//concurrency.Testing5()
 	// concurrency.Testing4()
 	// concurrency.Testing3()
