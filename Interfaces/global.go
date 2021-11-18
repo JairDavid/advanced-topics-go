@@ -1,14 +1,14 @@
 package interfaces
 
 type Repository interface {
-	Create()
-	Update()
+	Create(string) string
+	Update(string) string
 }
 
-func Create(r Repository) {
-	r.Create()
+func Create(r Repository, arg string) {
+	r.Create(arg)
 }
 
-func Update(r Repository) {
-	r.Update()
+func Update(r Repository, arg string) {
+	r.Update(arg)
 }

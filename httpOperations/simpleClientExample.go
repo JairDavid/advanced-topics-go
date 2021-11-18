@@ -1,4 +1,4 @@
-package SimpleServer
+package httpOperations
 
 import (
 	"fmt"
