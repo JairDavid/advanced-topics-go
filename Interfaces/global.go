@@ -1,8 +1,8 @@
 package interfaces
 
 type Repository interface {
-	Create(string) string
-	Update(string) string
+	Create(string) interface{}
+	Update(string) interface{}
 }
 
 func Create(r Repository, arg string) {
