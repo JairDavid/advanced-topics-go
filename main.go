@@ -1,16 +1,13 @@
 package main
 
-import (
-	"fmt"
-	interfaces "paquetes/Interfaces"
-)
+import "paquetes/concurrency"
 
 func main() {
-	var s1 interfaces.Service1
-	var s2 interfaces.Service2
+	// var s1 interfaces.Service1
+	// var s2 interfaces.Service2
 
-	fmt.Println(interfaces.Repository.Create(&s1, "jair 1"))
-	fmt.Println(interfaces.Repository.Create(&s2, "jair 2"))
+	// fmt.Println(interfaces.Repository.Create(&s1, "jair 1"))
+	// fmt.Println(interfaces.Repository.Create(&s2, "jair 2"))
 	//interfaces.TestingImplementation()
 	//functions.Start()
 	// functions.StartAnonymous()
@@ -31,4 +28,5 @@ func main() {
 	// concurrency.Testing3()
 	// concurrency.Testing2()
 	// concurrency.Testing()
+	concurrency.Launch()
 }
