@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-func netcatHandler() {
+func NetcatStart() {
 	conn, err := net.Dial("tcp", "localhost:5000")
 	if err != nil {
 		fmt.Print(err)

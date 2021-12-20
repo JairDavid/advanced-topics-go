@@ -29,6 +29,9 @@ func main() {
 	// concurrency.Testing2()
 	// concurrency.Testing()
 	// concurrency.Launch()
-	httpOperations.Marshalling()
-	httpOperations.Unmarshalling()
+	// httpOperations.Marshalling()
+	// httpOperations.Unmarshalling()
+	httpOperations.NetcatStart()
+	httpOperations.NewConnection()
+
 }

@@ -38,3 +38,38 @@ func MessageWrite(conn net.Conn, messages <-chan string) {
 		fmt.Fprintln(conn, msg)
 	}
 }
+
+func Broadcast() {
+	clients := make(map[Client]bool)
+	for {
+		select {
+		case message := <-messages:
+			for client := range clients {
+				client <- message
+			}
+		case newClient := <-incomingClients:
+			clients[newClient] = true
+		case leavingClient := <-leavingClients:
+			delete(clients, leavingClient)
+			close(leavingClient)
+		}
+	}
+}
+
+func NewConnection() {
+	listener, err := net.Listen("tcp", "localhost:5000")
+	if err != nil {
+		fmt.Print(err)
+	}
+
+	go Broadcast()
+
+	for {
+		conn, err := listener.Accept()
+		if err != nil {
+			fmt.Print(err)
+			continue
+		}
+		go handleConnection(conn)
+	}
+}
