@@ -1,6 +1,6 @@
 package main
 
-import "paquetes/httpOperations"
+import concurrencygobook "paquetes/concurrencyGoBook"
 
 func main() {
 	// var s1 interfaces.Service1
@@ -31,7 +31,9 @@ func main() {
 	// concurrency.Launch()
 	// httpOperations.Marshalling()
 	// httpOperations.Unmarshalling()
-	httpOperations.NetcatStart()
-	httpOperations.NewConnection()
+	//httpOperations.NetcatStart()
+	//httpOperations.NewConnection()
+
+	concurrencygobook.RaceCondition()
 
 }
