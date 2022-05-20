@@ -35,5 +35,5 @@ func main() {
 	//httpOperations.NewConnection()
 
 	concurrencygobook.RaceCondition()
-
+	concurrencygobook.Memory()
 }
