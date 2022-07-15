@@ -1,0 +1,5 @@
+- Big O notes:
+
+[] To calculate the algorithm complexity we have to add all the 
+[] discovered notations of algorithm and select the worst notation case to say the final complexity
+[-]Example: O(1) + O(N) + O(Log N) = O(Log N)
